@@ -1177,6 +1177,7 @@ declare namespace Eris {
     discriminator: string;
     id: string;
     username: string;
+    global_name?: string;
   }
   interface RequestGuildMembersOptions extends Omit<FetchMembersOptions, "userIDs"> {
     nonce: string;
@@ -3740,6 +3741,7 @@ declare namespace Eris {
     staticAvatarURL: string;
     system: boolean;
     username: string;
+    global_name: string;
     constructor(data: BaseData, client: Client);
     addRelationship(block?: boolean): Promise<void>;
     deleteNote(): Promise<void>;
